@@ -1,0 +1,48 @@
+<html>
+
+<head>
+<title> Aula JS </title>
+
+</head>
+
+<body>
+<h1> Minha calculadora</h1>
+<script>
+alert ("Escolha os valores para conta");
+let simbulo = " ";
+let a = Number (prompt ("Digite o primeiro valor: ")); 
+let b = Number (prompt ("Digite o segundo valor: ")); 
+let opcao = Number (prompt ("Digite a opção sendo 1-Soma 2-Subtração 3-Divisão 4-Multiplicação: "));
+switch (opcao){
+
+    case 1: 
+    resultado = a + b;
+    simbulo = ("+");
+    break;
+    case 2:
+    resultado = a  - b;
+    simbulo = ("-");
+    break;
+    case 3:
+        if (a != 0 ){
+            resultado = a / b;
+            simbulo = ("/");
+        }
+        else {
+            alert ("Zero não pode ser dividido");
+        }
+    resultado = a / b;
+    break;
+    case 4:
+    resultado = a * b;
+    simbulo = ("*");
+    break;
+    default: 
+    alert ("Opção inválida");
+
+} 
+alert (`A conta feita foi de: ${a} ${simbulo} ${b}= ${resultado}`);
+  
+</script>
+</body>
+</html>
