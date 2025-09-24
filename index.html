@@ -8,12 +8,14 @@
 <body>
 <h1> Minha calculadora</h1>
 <script>
+  
 alert ("Escolha os valores para conta");
 let simbulo = " ";
+do{
 let a = Number (prompt ("Digite o primeiro valor: ")); 
 let b = Number (prompt ("Digite o segundo valor: ")); 
-let opcao = Number (prompt ("Digite a opção sendo 1-Soma 2-Subtração 3-Divisão 4-Multiplicação: "));
-switch (opcao){
+let opcao = Number (prompt ("Digite a opção sendo 1-Soma 2-Subtração 3-Divisão 4-Multiplicação 4-Sair: "));
+    switch (opcao){
 
     case 1: 
     resultado = a + b;
@@ -34,15 +36,14 @@ switch (opcao){
     resultado = a / b;
     break;
     case 4:
-    resultado = a * b;
-    simbulo = ("*");
+    resultado= a * b;
+    simbulo= ("*");
     break;
     default: 
     alert ("Opção inválida");
-
-} 
+    }
 alert (`A conta feita foi de: ${a} ${simbulo} ${b}= ${resultado}`);
-  
+}while (opcao != 5)
 </script>
 </body>
 </html>
